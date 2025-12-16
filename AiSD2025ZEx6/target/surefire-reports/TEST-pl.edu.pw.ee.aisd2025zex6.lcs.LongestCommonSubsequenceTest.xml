@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="pl.edu.pw.ee.aisd2025zex6.benchmark.BenchmarkRunner" time="159.53" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="pl.edu.pw.ee.aisd2025zex6.lcs.LongestCommonSubsequenceTest" time="0.278" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,9 +15,9 @@
     <property name="user.country" value="PL"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\mikol\AppData\Local\Temp\surefire15026129203140666254\surefirebooter-20251216162745260_3.jar C:\Users\mikol\AppData\Local\Temp\surefire15026129203140666254 2025-12-16T16-27-45_086-jvmRun1 surefire-20251216162745260_1tmp surefire_0-20251216162745260_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\mikol\AppData\Local\Temp\surefire11135093534811352417\surefirebooter-20251216162627277_3.jar C:\Users\mikol\AppData\Local\Temp\surefire11135093534811352417 2025-12-16T16-26-27_060-jvmRun1 surefire-20251216162627277_1tmp surefire_0-20251216162627277_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="test" value="pl.edu.pw.ee.aisd2025zex6.benchmark.BenchmarkRunner"/>
+    <property name="test" value="pl.edu.pw.ee.aisd2025zex6.lcs.LongestCommonSubsequenceTest"/>
     <property name="surefire.test.class.path" value="C:\Users\mikol\Downloads\AiSD2025ZEx6\AiSD6\AiSD2025ZEx6\target\test-classes;C:\Users\mikol\Downloads\AiSD2025ZEx6\AiSD6\AiSD2025ZEx6\target\classes;C:\Users\mikol\.m2\repository\org\junit\jupiter\junit-jupiter\5.11.3\junit-jupiter-5.11.3.jar;C:\Users\mikol\.m2\repository\org\junit\vintage\junit-vintage-engine\5.11.3\junit-vintage-engine-5.11.3.jar;C:\Users\mikol\.m2\repository\org\junit\platform\junit-platform-engine\1.11.3\junit-platform-engine-1.11.3.jar;C:\Users\mikol\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\mikol\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\mikol\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\mikol\.m2\repository\org\assertj\assertj-core\3.26.3\assertj-core-3.26.3.jar;C:\Users\mikol\.m2\repository\net\bytebuddy\byte-buddy\1.14.18\byte-buddy-1.14.18.jar;C:\Users\mikol\.m2\repository\org\mockito\mockito-core\4.5.1\mockito-core-4.5.1.jar;C:\Users\mikol\.m2\repository\net\bytebuddy\byte-buddy-agent\1.12.9\byte-buddy-agent-1.12.9.jar;C:\Users\mikol\.m2\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;C:\Users\mikol\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\mikol\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\mikol\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\mikol\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\mikol\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\mikol"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\mikol\AppData\Local\Temp\surefire15026129203140666254\surefirebooter-20251216162745260_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\mikol\AppData\Local\Temp\surefire11135093534811352417\surefirebooter-20251216162627277_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.8+12-LTS-250"/>
@@ -60,20 +60,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="runBenchmarks" classname="pl.edu.pw.ee.aisd2025zex6.benchmark.BenchmarkRunner" time="159.491">
-    <system-out><![CDATA[Szukamy N, dla którego czas wykonania ~= 4000 ms
-
->>> Problem Cięcia Pręta (Rod Cutting) <<<
-Testowanie Rekurencyjna... Znaleziono N = 31 (Czas: 7827 ms)
-Testowanie Top-Down... 
-   [!] BŁĄD: Przepełnienie stosu (StackOverflow) przy N = 15500
-       (Limit pamięci rekurencji osiągnięty przed limitem czasu)
-Testowanie Bottom-Up... Znaleziono N = 45000 (Czas: 4052 ms)
---------------------------------------------------
->>> Problem Mnożenia Macierzy (Matrix Chain Order) <<<
-Testowanie Rekurencyjna... Znaleziono N = 19 (Czas: 5154 ms)
-Testowanie Top-Down... Znaleziono N = 1100 (Czas: 5759 ms)
-Testowanie Bottom-Up... Znaleziono N = 1350 (Czas: 4007 ms)
-]]></system-out>
-  </testcase>
+  <testcase name="should_HandleEmptyInputs" classname="pl.edu.pw.ee.aisd2025zex6.lcs.LongestCommonSubsequenceTest" time="0.194"/>
+  <testcase name="should_FindCorrectLcs_ForStandardCases" classname="pl.edu.pw.ee.aisd2025zex6.lcs.LongestCommonSubsequenceTest" time="0.004"/>
 </testsuite>

@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: pl.edu.pw.ee.aisd2025zex6.benchmark.BenchmarkRunner
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 276.5 s -- in pl.edu.pw.ee.aisd2025zex6.benchmark.BenchmarkRunner
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 159.5 s -- in pl.edu.pw.ee.aisd2025zex6.benchmark.BenchmarkRunner

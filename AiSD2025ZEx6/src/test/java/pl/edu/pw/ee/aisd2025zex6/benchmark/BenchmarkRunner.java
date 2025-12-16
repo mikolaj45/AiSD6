@@ -12,7 +12,6 @@ public class BenchmarkRunner {
 
     @Test
     public void runBenchmarks() {
-        System.out.println("=== Rozpoczynam pomiary (Zadanie 1) ===");
         System.out.println("Szukamy N, dla którego czas wykonania ~= " + TIME_LIMIT_MS + " ms\n");
 
         runRodCuttingBenchmarks();
@@ -25,13 +24,10 @@ public class BenchmarkRunner {
     private void runRodCuttingBenchmarks() {
         System.out.println(">>> Problem Cięcia Pręta (Rod Cutting) <<<");
 
-        // 1. Rekurencyjna
         measureRodCutter("Rekurencyjna", new RodCutterRecursive(), 10, 1);
 
-        // 2. Zstępująca (Top-Down)
         measureRodCutter("Top-Down", new RodCutterTopDown(), 1000, 500);
 
-        // 3. Wstępująca (Bottom-Up)
         measureRodCutter("Bottom-Up", new RodCutterBottomUp(), 1000, 500);
     }
 
@@ -39,36 +35,30 @@ public class BenchmarkRunner {
         System.out.print("Testowanie " + name + "... ");
         int n = startN;
         long elapsedTime = 0;
-        // Duży bufor cen, aby uniknąć błędów indeksowania przy dużych N
         int[] prices = generatePrices(500000);
 
         while (true) {
-            // Zabezpieczenie: jeśli N przekroczy rozmiar tablicy, generujemy nową większą
             if (n > prices.length) {
                 prices = generatePrices(n * 2);
             }
 
             long start = System.nanoTime();
             try {
-                // Próba uruchomienia algorytmu
                 algorithm.cutRod(prices, n);
             } catch (StackOverflowError e) {
-                // Obsługa błędu przepełnienia stosu
                 System.out.println("\n   [!] BŁĄD: Przepełnienie stosu (StackOverflow) przy N = " + n);
                 System.out.println("       (Limit pamięci rekurencji osiągnięty przed limitem czasu)");
-                break; // Przerywamy pętlę dla tego algorytmu i idziemy do następnego
+                break;
             }
             long end = System.nanoTime();
 
-            elapsedTime = (end - start) / 1_000_000; // ms
+            elapsedTime = (end - start) / 1_000_000;
 
-            // Sprawdzenie, czy przekroczyliśmy czas
             if (elapsedTime >= TIME_LIMIT_MS) {
                 System.out.println("Znaleziono N = " + n + " (Czas: " + elapsedTime + " ms)");
                 break;
             }
 
-            // Heurystyka przyspieszająca szukanie
             if (elapsedTime < 100 && step > 1) {
                 n += step * 2;
             } else {
@@ -86,19 +76,13 @@ public class BenchmarkRunner {
         return prices;
     }
 
-    // --- MATRIX CHAIN ORDER (MNOŻENIE MACIERZY) ---
-
     private void runMatrixChainBenchmarks() {
         System.out.println(">>> Problem Mnożenia Macierzy (Matrix Chain Order) <<<");
 
-        // 1. Rekurencyjna
         measureMatrixChain("Rekurencyjna", new MatrixChainOrderRecursive(), 5, 1);
 
-        // 2. Zstępująca (Top-Down)
-        // Upewnij się, że masz klasę MatrixChainOrderTopDown w projekcie!
         measureMatrixChain("Top-Down", new MatrixChainOrderTopDown(), 100, 50);
 
-        // 3. Wstępująca (Bottom-Up)
         measureMatrixChain("Bottom-Up", new MatrixChainOrderBottomUp(), 100, 50);
     }
 
@@ -112,10 +96,8 @@ public class BenchmarkRunner {
 
             long start = System.nanoTime();
             try {
-                // Próba uruchomienia algorytmu
                 algorithm.findOptimalOrder(matrixSizes);
             } catch (StackOverflowError e) {
-                // Obsługa błędu przepełnienia stosu
                 System.out.println("\n   [!] BŁĄD: Przepełnienie stosu (StackOverflow) przy N = " + n);
                 System.out.println("       (Limit pamięci rekurencji osiągnięty przed limitem czasu)");
                 break;

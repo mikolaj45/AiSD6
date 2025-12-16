@@ -31,7 +31,6 @@ public class MatrixChainOrderTopDown extends MatrixChainOrder {
             return 0;
         }
 
-        // SPAMIĘTYWANIE: Jeśli wartość została już obliczona, zwróć ją.
         if (costCounters[startId][endId] < Integer.MAX_VALUE) {
             return costCounters[startId][endId];
         }
@@ -51,7 +50,6 @@ public class MatrixChainOrderTopDown extends MatrixChainOrder {
             }
         }
 
-        // Zapisz wynik w tablicy
         costCounters[startId][endId] = minCost;
 
         return minCost;
