@@ -3,6 +3,7 @@ pl\edu\pw\ee\aisd2025zex6\matrixchainorder\MatrixChainOrderExtendedResult.class
 pl\edu\pw\ee\aisd2025zex6\matrixchainorder\MatrixChainOrderBottomUp.class
 pl\edu\pw\ee\aisd2025zex6\rodcuttingproblem\RodCutter.class
 pl\edu\pw\ee\aisd2025zex6\matrixchainorder\MatrixChainOrder.class
+pl\edu\pw\ee\aisd2025zex6\matrixchainorder\MatrixChainOrderTopDown.class
 pl\edu\pw\ee\aisd2025zex6\rodcuttingproblem\RodCutterBottomUp.class
 pl\edu\pw\ee\aisd2025zex6\rodcuttingproblem\RodCutterTopDown.class
 pl\edu\pw\ee\aisd2025zex6\matrixchainorder\MatrixChainOrderResult.class
